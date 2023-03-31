@@ -1,0 +1,32 @@
+<!-- Parent -->
+<h1>parent component</h1>
+<p>parent works!</p>
+<hr />
+<!--  -->
+<!-- sharedcomp1 x 2 adet -->
+<!--  -->
+<h5>parent works! sharedcomp1 x 2</h5>
+<app-sharedcomp1
+  (shareElderSiblingDataEvent)="shareElderSiblingData($event)"
+></app-sharedcomp1>
+<hr />
+<app-sharedcomp1
+  [isMultipleUsage]="true"
+  [sharedComp1Data$]="emittedSharedComp1Data$"
+></app-sharedcomp1>
+<!--  -->
+<!-- sharedcomp2 x 2 adet -->
+<!--  -->
+<hr />
+<h5>parent works! sharedcomp2 x 2</h5>
+<app-sharedcomp2></app-sharedcomp2>
+<hr />
+<app-sharedcomp2 [isMultipleUsage]="true"></app-sharedcomp2>
+<!--  -->
+<!-- sharedcomp3 x 2 -->
+<!--  -->
+<hr />
+<h1>parent works! sharedcomp3</h1>
+<app-sharedcomp3></app-sharedcomp3>
+<hr>
+<app-sharedcomp3></app-sharedcomp3>
